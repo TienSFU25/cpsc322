@@ -180,6 +180,11 @@ class Search_with_AC_from_CSP(Search_problem,Displayable):
         """
         neighs = []
         var = select(x for x in node if len(node[x])>1)
+        # print("DISME TIENBOY")
+        # print(node)
+        # print(var)
+        # print("------->")
+
         if var:
             dom1, dom2 = partition_domain(node[var])
             self.display(2,"Splitting", var, "into", dom1, "and", dom2)

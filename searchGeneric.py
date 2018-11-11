@@ -44,7 +44,7 @@ class Searcher(Displayable):
             self.display(1, "Expanding:",path,"(cost:",path.cost,")")
             self.num_expanded += 1
             if self.problem.is_goal(path.end()):    # solution found
-                self.display(1, self.num_expanded, "paths have been expanded and",
+                self.display(2, self.num_expanded, "paths have been expanded and",
                             len(self.frontier), "paths remain in the frontier")
                 self.solution = path   # store the solution found
                 return path

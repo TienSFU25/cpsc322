@@ -257,3 +257,17 @@ cyclic_delivery_problem = Search_problem_from_explicit_graph(
         }
     )
 
+ubc_food = Search_problem_from_explicit_graph(
+    {'CS', 'CSX', 'DMP', 'PP', 'Forestry', 'Timmies', 'Starbucks', 'BAW'},
+    [
+        Arc('CSX', 'CS', 2),
+        Arc('CSX', 'PP', 1),
+        Arc('DMP', 'CSX', 3),
+        Arc('CSX', 'Forestry', 4),
+        Arc('DMP', 'Forestry', 5),
+        Arc('Forestry', 'BAW', 5),
+        Arc('Forestry', 'Timmies', 1),
+        Arc('DMP', 'Starbucks', 11)
+    ],
+    start = 'DMP',
+    goals = {'PP','BAW','Timmies','Starbucks'})
